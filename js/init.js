@@ -17,6 +17,7 @@
 		}
 	});
 
+
 	$(function() {
 
 		var	$window = $(window),

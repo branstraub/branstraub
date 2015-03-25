@@ -45,7 +45,7 @@
 				<header>
 					<div class="container">
 						<h2>"Love all, trust a few, do wrong to none"</h2>
-						<p>Soy estudiante de Ingenieria Informatica en el Instituto Tecnologico de Buenos Aires. Actualemente me desempeo como desarrollador en Web, Cloud y Mobile. Integro el equipo de Microsoft Argentina como Microsoft Student Partner Lead.</p>
+						<p>Soy estudiante de Ingenieria Informatica en el Instituto Tecnologico de Buenos Aires. Actualemente me desempeño como desarrollador en Web, Cloud y Mobile. Integro el equipo de Microsoft Argentina como Microsoft Student Partner Lead.</p>
 					</div>
 				</header>
 				<div class="content dark style1 featured">
@@ -163,7 +163,7 @@
 								<p>El Backend tanto de AzureBoxes como el de Subtes Caba se encuentra en Cloud (Microsoft Azure).</p>
 								<p>Utilizando bases de datos, computo y procesamiento de datos, estadisticas y mucho más. Todos los desarrollos hoy en dia pueden sacar provecho de la nube, por eso en todos mis desarrollos busco utilizar la disponibilidad, escalabilidad y potencia de la nube para sacar el 100% de cada uno de los proyectos que realizo.</p>
 								<footer>
-									<a href="https://branstraub.wordpress.com/" target="_blank" class="button scrolly">Leer más</a>
+									<a href="https://branstraub.wordpress.com/" target="_blank" class="button scrolly">Blog</a>
 								</footer>
 							</div>
 						</div>
@@ -327,7 +327,7 @@
 								<div class="row">
 									<div class="12u">
 										<ul class="actions">
-											<li><input type="submit" class="button" value="Enviar" /></li>
+											<li><input onclick="sendFeedback();" class="button" value="Enviar" /></li>
 											<li><input type="reset" class="button alt" value="Resetear" /></li>
 										</ul>
 									</div>
@@ -339,6 +339,19 @@
 					</div>
 				</div>
 			</section>
+
+			<script type="text/javascript">
+
+				function sendFeedback(){
+					search_nombre = $('#name');
+					search_body = $('#message');
+					search_subject = $('#subject');
+					search_email = $('#email');
+					search_body.val = search_body.val().replace(/\n/g, "%0D%0A");
+					window.location.href = "mailto:b.straub@outlook.com?subject="+search_subject.val()+"&body=" + "Nombre: " + search_nombre.val() + "%0D%0A" + "Email: " + search_email.val() + "%0D%0A" + "%0D%0A" + search_body.val;
+				}
+
+			</script>
 		
 		<!--		
 			<section id="fourth" class="main">
